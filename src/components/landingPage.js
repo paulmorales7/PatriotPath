@@ -32,9 +32,21 @@ function LandingPage() {
             registerRef.current.classList.remove("hidden");
         }
     }
-    
 
-      // when login form is out i want the form to slide out login style left 0 and register ref style left 100%
+    function menuFunction() {
+
+        var i = document.getElementById("navMenu");
+
+        if(i.className === "nav-menu") {
+            i.className += " responsive";
+        } else {
+            i.className = "nav-menu";
+        }
+
+    }
+
+
+
 
     return (
         <div className="wrapper">
@@ -42,7 +54,7 @@ function LandingPage() {
                 <div className="nav-logo">
                     <p>Patriot Path</p>
                 </div>
-                <div className="nav-menu">
+                <div className="nav-menu" id="navMenu">
                     <ul>
                         <li><a href="#" className="link active">Home</a></li>
                         <li><a href="#" className="link">Blog</a></li>
@@ -56,7 +68,7 @@ function LandingPage() {
                     <button className="btn" id="registerBtn" onClick={register}> Sign Up</button>
                 </div>
                 <div className="nav-menu-btn">
-                    <BsList />
+                    <BsList onClick={menuFunction}/>
                 </div>
 
             </nav>

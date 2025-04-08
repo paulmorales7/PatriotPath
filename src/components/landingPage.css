@@ -108,8 +108,8 @@ body {
     flex-direction: column;
     transition: .5s ease-in-out;
     margin: 5px;
-    opacity: 0; /* ADD */
-    pointer-events: none; /* ADD */
+    opacity: 0; 
+    pointer-events: none; 
 }
 
 .login-container {
@@ -120,8 +120,8 @@ body {
     flex-direction: column;
     transition: .5s ease-in-out;
     margin: 5px;
-    opacity: 1; /* ADD */
-    pointer-events: auto; /* ADD */
+    opacity: 1; 
+    pointer-events: auto; 
 }
 
 .register-container.active {
@@ -231,4 +231,51 @@ header {
 }
 .two label a:hover{
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 786px) {
+    .nav-button {
+        display: none;
+    }
+
+    .nav-menu.responsive {
+        top: 100px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255,255,255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .nav-menu-btn i {
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255,255,255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .nav-menu-btn i:hover {
+        background: rgba(255,255,255, 0.15);
+    }
+
+
 }
