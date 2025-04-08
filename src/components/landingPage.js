@@ -12,23 +12,30 @@ function LandingPage() {
     const loginRef = useRef(null);
 
 
-    function register() {
-        if (registerRef.current) {
-            loginRef.current.style.right = "-510px";
-            registerRef.current.style.left = "5px";
-          }
-        console.log("pressed")
-    }
-
     function login() {
-        if (loginRef.current) {
-            loginRef.current.style.left = "4px"; // Move the login form to the left by 4px
+        if (loginRef.current && registerRef.current) {
+            loginRef.current.classList.remove("hidden");
+            loginRef.current.classList.add("active");
+    
+            registerRef.current.classList.remove("active");
+            registerRef.current.classList.add("hidden");
         }
-        if (registerRef.current) {
-            registerRef.current.style.right = "-520px"; // Move the register form out of view
-        }
-        console.log("pressed")
     }
+    
+    function register() {
+        if (loginRef.current && registerRef.current) {
+            registerRef.current.classList.add("active");
+            loginRef.current.classList.add("hidden");
+    
+            // Make sure login doesn't have active class anymore
+            loginRef.current.classList.remove("active");
+            registerRef.current.classList.remove("hidden");
+        }
+    }
+    
+
+      // when login form is out i want the form to slide out login style left 0 and register ref style left 100%
+
     return (
         <div className="wrapper">
             <nav className="nav">
@@ -60,7 +67,7 @@ function LandingPage() {
                     {/* Login form */}
                 <div className="login-container" ref={loginRef} id="login">
                     <div className="top">
-                        <span onClick={login}>Don't have an Account? <a href="#" >Sign Up</a></span>
+                        <span onClick={register}>Don't have an Account? <a href="#" >Sign Up</a></span>
                         <header>Login</header>
                     </div>
 
@@ -92,7 +99,7 @@ function LandingPage() {
                     {/* Registration form */}
                 <div className="register-container" ref={registerRef} id="register">
                     <div className="top">
-                        <span onClick={register}>Have an Account? <a href="#" >Sign In</a></span>
+                        <span onClick={login}>Have an Account? <a href="#" >Sign In</a></span>
                         <header>Sign Up</header>
                     </div>
 

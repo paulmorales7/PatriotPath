@@ -96,17 +96,20 @@ body {
     justify-content: center;
     width: 512px;
     height: 420px;
-    border: 1px solid white;
+    overflow: hidden;
     z-index: 2;
 }
 
 .register-container {
     position: absolute;
-    right: -520px;
+    left: 100%;
     display: flex;
     width: 500px;
     flex-direction: column;
     transition: .5s ease-in-out;
+    margin: 5px;
+    opacity: 0; /* ADD */
+    pointer-events: none; /* ADD */
 }
 
 .login-container {
@@ -116,7 +119,25 @@ body {
     width: 500px;
     flex-direction: column;
     transition: .5s ease-in-out;
+    margin: 5px;
+    opacity: 1; /* ADD */
+    pointer-events: auto; /* ADD */
 }
+
+.register-container.active {
+    left: 0;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.login-container.hidden {
+    left: -100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
 
 .top span {
     color: white;
