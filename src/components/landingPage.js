@@ -5,11 +5,13 @@ import { GrLock } from "react-icons/gr";
 import { FaRegUser } from "react-icons/fa6";
 import { GrMailOption } from "react-icons/gr";
 import './LandingPage.css';
-
+ 
+// note new
 function LandingPage() {
 
     const registerRef = useRef(null);
     const loginRef = useRef(null);
+    const newref = newRef(null);
 
 
     function login() {
@@ -45,7 +47,7 @@ function LandingPage() {
 
     }
 
-
+// need to fix nav btn not showing up
 
 
     return (
@@ -116,15 +118,18 @@ function LandingPage() {
                     </div>
 
                     <div className="two-forms">
-                        <div className="input-box">
-                            <input type="text" className="input-field" placeholder="First Name"/>
-                            <FaRegUser className="icon"/>
-                        </div>
-                        <div className="input-box">
-                            <input type="text" className="input-field" placeholder="Last Name"/>
-                            <FaRegUser className="icon"/>
-                        </div>
-                    </div>
+                        
+                            <div className="input-box">
+                                <input type="text" className="input-field" id="nameBox" placeholder="First Name"/>
+                                <FaRegUser className="icon"/>
+                            </div>
+                            <div className="input-box">
+                                <input type="text" className="input-field" id="nameBox" placeholder="Last Name"/>
+                                <FaRegUser className="icon"/>
+                            </div>
+
+
+                     </div>
                         <div className="input-box">
                             <input type="text" className="input-field" placeholder="Email"/>
                             <GrMailOption className="icon"/>
