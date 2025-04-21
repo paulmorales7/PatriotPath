@@ -1,17 +1,16 @@
 import React, { useRef } from "react";
-import bgImg from '../assets/VeteransPic.jpg';
+// import bgImg from '../assets/VeteransPic.jpg';
 import { BsList } from "react-icons/bs";
 import { GrLock } from "react-icons/gr";
 import { FaRegUser } from "react-icons/fa6";
 import { GrMailOption } from "react-icons/gr";
 import './LandingPage.css';
  
-// note new
+
 function LandingPage() {
 
     const registerRef = useRef(null);
     const loginRef = useRef(null);
-    const newref = newRef(null);
 
 
     function login() {
