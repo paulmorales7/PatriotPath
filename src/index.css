@@ -7,5 +7,5 @@ body {
 }
 
 @tailwind base;
-@tailwindm components;
+@tailwind components;
 @tailwind utilities;
