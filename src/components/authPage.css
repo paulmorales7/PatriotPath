@@ -67,6 +67,7 @@ body {
     border-radius: 30px;
     cursor: pointer;
     transition: .3s ease;
+    line-height: normal;
 }
 
 .btn:hover {
@@ -84,6 +85,10 @@ body {
 .btn.btn.white-btn:hover {
     background: rgba(255,255,255, 0.4);
 }
+
+/* .btn.btn.dark-btn:hover {
+    background: rgba(251, 255, 220, 0.8);
+} */
 
 .nav-menu-btn {
     display: none;

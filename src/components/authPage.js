@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-// import bgImg from '../assets/VeteransPic.jpg';
+import bgImg from '../assets/VeteransPic.jpg';
 import { BsList } from "react-icons/bs";
 import { GrLock } from "react-icons/gr";
 import { FaRegUser } from "react-icons/fa6";
 import { GrMailOption } from "react-icons/gr";
-import './LandingPage.css';
+import './authPage.css';
  
 
 function LandingPage() {
@@ -46,8 +46,6 @@ function LandingPage() {
 
     }
 
-// need to fix nav btn not showing up
-
 
     return (
         <div className="wrapper">
@@ -66,7 +64,7 @@ function LandingPage() {
                 </div>
                 <div className="nav-button">
                     <button className="btn white-btn" id="loginBtn" onClick={login}>Sign In</button>
-                    <button className="btn" id="registerBtn" onClick={register}> Sign Up</button>
+                    <button className="btn dark-btn" id="registerBtn" onClick={register}> Sign Up</button>
                 </div>
                 <div className="nav-menu-btn">
                     <BsList onClick={menuFunction}/>
