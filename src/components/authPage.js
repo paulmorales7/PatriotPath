@@ -55,7 +55,7 @@ function LandingPage() {
                 </div>
                 <div className="nav-menu" id="navMenu">
                     <ul>
-                        <li><a href="#" className="link active">Home</a></li>
+                        <li><a href="/Home" className="link active">Home</a></li>
                         <li><a href="#" className="link">Blog</a></li>
                         <li><a href="#" className="link">Services</a></li>
                         <li><a href="#" className="link">About</a></li>

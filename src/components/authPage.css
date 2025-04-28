@@ -4,19 +4,16 @@
     box-sizing: border-box;
 }
 
-body {
-    background: url("../assets/VeteranImgHD.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 110vh;
     background: rgba(39,39,39,0.4);
+    background: url("../assets/VeteranImgHD.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .nav {
