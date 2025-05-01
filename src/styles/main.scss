@@ -1,15 +1,11 @@
 @import "./_variables";
 
-// body {
-//     overflow: hidden;
-//     height: 100vh;
-//     width: 100vw;
-// }
+.container {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-// h1 {
-//     width: 100vw;
-//     height: 100vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }

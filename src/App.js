@@ -1,4 +1,4 @@
-import './App.css';
+// import './styles/main.scss'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Authentication from './components/authPage';
 import Home from './components/Home';
@@ -8,11 +8,11 @@ function App() {
   return (
       <Router>
           <div className="App">
-              
+              <SideNav />
+
               <Routes>
                 <Route path="/" element={<Authentication />}/>
                 <Route path="/Home" element={<Home />}/>
-                <Route path="/Side" element={<SideNav />}/>
               </Routes>
           </div>
       </Router>
