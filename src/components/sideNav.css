@@ -16,6 +16,8 @@
         .logo {
             transform: scale(2); 
             margin: 0 0 0 1rem;
+            /* need to figure out line under logo, 
+            as well as why hello user wraps around */
         }
 
         
@@ -47,6 +49,7 @@
             margin-bottom: 2rem;
             font-size: 16px;
             text-transform: capitalize;
+            text-wrap: nowrap;
         }
         
     }
@@ -80,11 +83,12 @@
         background-color: black;
         position: relative;
         z-index: 1;
-        width: 20px;
-        height: 3px;
+        width: 18px;
+        height: 2px;
         border-radius: 2rem;
         bottom: calc(35px / 2);
-        left: .45rem;
+        left: .6rem;
+        top: -19px;
         cursor: pointer;
     }
 
@@ -92,19 +96,20 @@
         content: '';
         background-color: white;
         position: absolute;
-        width: 20px;
-        height: 3px;
+        width: 18px;
+        height: 2px;
         border-radius: 2rem;
-        top: 0.4rem;
+        top: 0.3rem;
         transform: translateY(-0.4rem) rotate(45deg);
+        margin-top: 1px;
     }
 
     .expandMenu::before {
         content: '';
         background-color: white;
         position: absolute;
-        width: 20px;
-        height: 3px;
+        width: 18px;
+        height: 2px;
         border-radius: 2rem;
         top: -0.4rem;
         transform: translateY(0.4rem) rotate(-45deg);
@@ -120,6 +125,18 @@
     width: calc(6rem + 15rem);
     background-color: rgb(234, 234, 234);
     height: 1px;
+}
+
+.expandContainer.active {
+    .expandMenu {
+        background-color: white;
+    }
+    .expandMenu::before {
+        transform: translateY(0rem) rotate(0deg);
+    }
+    .expandMenu::after {
+        transform: translateY(0rem) rotate(0deg);
+    }
 }
 
 .contentContainer {
