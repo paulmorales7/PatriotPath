@@ -50,7 +50,7 @@ function sideNav() {
                     <a href= "/blog">Blog</a>
                 </li>
                 <li>
-                    <TbInfoHexagonFilled className='navIcon'/>
+                    <TbInfoHexagonFilled className='navIcon aboutIcon'/>
                     <a href= "/about">About Us</a>
                 </li>
                 <li>

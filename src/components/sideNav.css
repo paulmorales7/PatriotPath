@@ -158,9 +158,16 @@
             margin: 1rem 0 4rem 0;
             width: 100%;
             border-radius: 1rem;
+            text-wrap: nowrap;
 
             .navIcon {
-                margin: 0 1rem 0;
+                margin-right: 0.5rem;
+                flex-shrink: 0;
+                font-size: 20px;
+            }
+
+            .aboutIcon {
+                font-size: 25px;
             }
 
             a {
