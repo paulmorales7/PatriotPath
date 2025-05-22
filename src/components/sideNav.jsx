@@ -1,13 +1,13 @@
 import React from 'react';
 import logo from '../assets/PatriotPathLogo.png';
-import { MdMilitaryTech } from "react-icons/md"
+import { IoMenu } from "react-icons/io5"
 import { IoHomeOutline } from "react-icons/io5";
 import { BsFillSuitcaseLgFill } from "react-icons/bs";
 import { GrArticle } from "react-icons/gr";
 import { TbInfoHexagonFilled } from "react-icons/tb";
 import { RiContactsBook3Line } from "react-icons/ri";
-
-import './sideNav.css';
+import '../styles/main.scss';
+// import './sideNav.css';
 
 
 function sideNav() {
@@ -22,6 +22,8 @@ function sideNav() {
 
            <div className="expandContainer">
                 <div className="expandTrigger"></div>
+                {/* i want to add <IoMenu /> as the menu icon instead 
+                using css as the menu and x */}
                 <div className="expandMenu"></div>
            </div>
 

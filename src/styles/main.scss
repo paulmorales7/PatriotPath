@@ -1,11 +1,205 @@
 @import "./_variables";
 
-.container {
-    overflow: hidden;
+// .container {
+//     overflow: hidden;
+//     height: 100vh;
+//     width: 100vw;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+.sideBar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    width: 15rem;
     height: 100vh;
-    width: 100vw;
+  
+    &.active {
+      width: 8rem;
+  
+      .logoContainer {
+        &.active {
+          .logo {
+            transform: scale(2);
+            margin: 0 0 2rem 1rem;
+            // need to figure out line under logo,
+            // as well as why hello user wraps around
+          }
+        }
+      }
+    }
+  }
+  
+  .logoContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  
+    .logo {
+      width: 80%;
+    }
+  }
+  
+  .profileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5rem 0 0 0;
+  
+    .profileInfo {
+      padding: 0 0 0 1rem;
+  
+      p.userName {
+        padding: 0;
+        margin-bottom: 2rem;
+        font-size: 16px;
+        text-transform: capitalize;
+        text-wrap: nowrap;
+        // opacity: 0;
+      }
+    }
 
+    &.active {
+        opacity: 0;
+    }
+  }
+  
+  .expandContainer {
+    content: '';
+    background-color: black;
+    position: absolute;
+    right: calc(-35px / 2);
+    width: 35px;
+    height: 35px;
+    border-radius: 2rem;
+    z-index: 1;
+  
+    .expandTrigger {
+      content: '';
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0;
+    }
+  
+    .expandMenu {
+      content: '';
+      background-color: black;
+      position: relative;
+      z-index: 1;
+      width: 18px;
+      height: 2px;
+      border-radius: 2rem;
+      bottom: calc(35px / 2);
+      left: 0.6rem;
+      top: -19px;
+      cursor: pointer;
+  
+      &::after {
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        border-radius: 2rem;
+        top: 0.3rem;
+        transform: translateY(-0.4rem) rotate(45deg);
+        margin-top: 1px;
+      }
+  
+      &::before {
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        border-radius: 2rem;
+        top: -0.4rem;
+        transform: translateY(0.4rem) rotate(-45deg);
+      }
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      right: 35px;
+      top: 1rem;
+      z-index: 0;
+      width: calc(6rem + 15rem);
+      background-color: rgb(234, 234, 234);
+      height: 1px;
+    }
+  
+    &.active {
+      .expandMenu {
+        background-color: white;
+  
+        &::before {
+          transform: translateY(0rem) rotate(0deg);
+        }
+  
+        &::after {
+          transform: translateY(0rem) rotate(0deg);
+        }
+      }
+    }
+  }
+  
+  .contentContainer {
+    margin: 1rem 0 0 0;
+  
+    ul {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        margin: 1rem 0 4rem 1.5rem;
+        width: 100%;
+        border-radius: 1rem;
+        text-wrap: nowrap;
+  
+        .navIcon {
+          margin-right: 0.5rem;
+          flex-shrink: 0;
+          font-size: 35px;
+        }
+  
+        .aboutIcon {
+          font-size: 40px;
+        }
+  
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0 0 0 0.5rem;
+        }
+      }
+    }
+  
+    &.active {
+      ul {
+        li {
+          a {
+            opacity: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  
