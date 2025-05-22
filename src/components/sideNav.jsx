@@ -39,11 +39,11 @@ function sideNav() {
 
            <div className="contentContainer">
             <ul>
-                <li>
+                <li className='active'>
                     <IoHomeOutline className='navIcon'/>
                     <a href= "/home">Home</a>
                 </li>
-                <li>
+                <li >
                     <BsFillSuitcaseLgFill className='navIcon'/>
                     <a href= "/services">Services</a>
                 </li>
@@ -59,7 +59,7 @@ function sideNav() {
                     <RiContactsBook3Line className='navIcon'/>
                     <a href= "/contact">Contact Us</a>
                 </li>
-                <li>
+                <li className='active'>
                     <RiContactsBook3Line className='navIcon'/>
                     <a href= "/contact">Another one</a>
                 </li>
