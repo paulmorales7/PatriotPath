@@ -20,6 +20,7 @@ const SideNav = () => {
 
     const handleCloseMenu = () => {
         setCloseMenu(!closeMenu);
+        console.log("clicked")
     };
 
     return (
@@ -31,7 +32,7 @@ const SideNav = () => {
            </div> 
 
            <div className={closeMenu === false ? "expandContainer" : "expandContainer active"}>
-                <div className="expandTrigger"></div>
+                <div className="expandTrigger" onClick={()=> { handleCloseMenu(); }}></div>
                 {/* i want to add <IoMenu /> as the menu icon instead 
                 using css as the menu and x */}
                 <div className="expandMenu"></div>
